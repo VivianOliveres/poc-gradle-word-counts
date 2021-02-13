@@ -9,8 +9,8 @@ repositories {
 }
 
 ext {
-    scalaMajorVersion = '2.13'
-    scalaVersion = "${scalaMajorVersion}.3"
+    scalaMajorVersion = '2.12'
+    scalaVersion = "${scalaMajorVersion}.13"
     slf4jVersion = '1.7.5'
 }
 
