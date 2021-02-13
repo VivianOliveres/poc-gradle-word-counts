@@ -1,0 +1,4 @@
+rootProject.name = 'poc-gradle-word-counts'
+include 'app-scala'
+include 'app-beam'
+include 'app-spark'
