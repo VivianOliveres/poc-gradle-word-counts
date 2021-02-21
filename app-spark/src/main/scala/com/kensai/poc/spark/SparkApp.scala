@@ -26,7 +26,7 @@ object SparkApp {
 
     val spark = SparkSession.builder
       .appName("Spark Word Count")
-      .config("spark.master", "local")
+      .master("local")
       .getOrCreate()
     val sc = spark.sparkContext
     SparkWordCount.countWords(sc, inputFile, outputFolder)

@@ -1,8 +1,0 @@
-plugins {
-    id 'com.kensai.poc.scala-common-conventions'
-}
-
-dependencies {
-//    implementation 'org.apache.commons:commons-text'
-//    implementation project(':utilities')
-}
