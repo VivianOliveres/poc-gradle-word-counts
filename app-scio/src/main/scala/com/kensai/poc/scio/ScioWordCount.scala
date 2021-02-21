@@ -1,4 +1,4 @@
-package com.kensai.poc.beam
+package com.kensai.poc.scio
 
 import com.spotify.scio._
 import com.spotify.scio.values.SCollection

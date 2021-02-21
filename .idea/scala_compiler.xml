@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="Gradle 1" modules="poc-gradle-word-counts.app-beam.main,poc-gradle-word-counts.app-beam.test,poc-gradle-word-counts.app-scala.main,poc-gradle-word-counts.app-scala.test,poc-gradle-word-counts.app-spark.main,poc-gradle-word-counts.app-spark.test,poc-gradle-word-counts.app.main,poc-gradle-word-counts.app.test,poc-gradle-word-counts.list.main,poc-gradle-word-counts.list.test,poc-gradle-word-counts.utilities.main,poc-gradle-word-counts.utilities.test">
+    <profile name="Gradle 1" modules="poc-gradle-word-counts.app-beam.main,poc-gradle-word-counts.app-beam.test,poc-gradle-word-counts.app-scala.main,poc-gradle-word-counts.app-scala.test,poc-gradle-word-counts.app-scio.main,poc-gradle-word-counts.app-scio.test,poc-gradle-word-counts.app-spark.main,poc-gradle-word-counts.app-spark.test,poc-gradle-word-counts.app.main,poc-gradle-word-counts.app.test,poc-gradle-word-counts.list.main,poc-gradle-word-counts.list.test,poc-gradle-word-counts.utilities.main,poc-gradle-word-counts.utilities.test">
       <option name="deprecationWarnings" value="true" />
       <option name="uncheckedWarnings" value="true" />
       <parameters>
