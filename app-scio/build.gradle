@@ -1,5 +1,5 @@
 plugins {
-    id 'com.kensai.poc.scala-common-conventions'
+    id 'com.kensai.poc.scala-common_2.12'
     id 'application'
 }
 
