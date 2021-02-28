@@ -22,7 +22,7 @@ object App {
 
   private def getLines(fileName: String): Seq[String] = {
     val bufferedSource = Source.fromFile(fileName)
-    val result = bufferedSource.getLines().toSeq
+    val result = bufferedSource.getLines().toList
     bufferedSource.close()
     result
   }
