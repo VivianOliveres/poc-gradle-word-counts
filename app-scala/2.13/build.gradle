@@ -1,0 +1,8 @@
+plugins {
+    id 'application'
+    id 'com.kensai.poc.scala-common_2.13'
+}
+
+application {
+    mainClass = 'com.kensai.poc.app.App'
+}

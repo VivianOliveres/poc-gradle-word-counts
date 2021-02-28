@@ -1,0 +1,52 @@
+plugins {
+    id 'scala'
+    id "com.adarshr.test-logger" // beautiful logs for test in console
+    id 'cz.alenkacz.gradle.scalafmt' // To format code according to scalafmt conf
+}
+
+repositories {
+    jcenter()
+}
+
+ext {
+    scalaMajorVersion = '2.13'
+    scalaVersion = "${scalaMajorVersion}.5"
+    slf4jVersion = '1.7.5'
+}
+
+dependencies {
+    constraints {
+        implementation "org.scala-lang:scala-library:${scalaVersion}"
+    }
+
+    // Use Scala 2.13 in our library project
+    implementation 'org.scala-lang:scala-library'
+
+    // Use Scalatest for testing
+    testImplementation "org.scalatest:scalatest_${scalaMajorVersion}:3.1.2"
+    testImplementation "junit:junit:4.13.1"
+    testImplementation "org.scalatest:scalatest_${scalaMajorVersion}:3.1.2"
+    testImplementation "org.scalatestplus:junit-4-12_${scalaMajorVersion}:3.1.2.0"
+    // Need scala-xml at test runtime
+    testRuntimeOnly "org.scala-lang.modules:scala-xml_${scalaMajorVersion}:1.3.0"
+
+    // Logging
+    implementation "org.slf4j:slf4j-api:${slf4jVersion}"
+    implementation "org.slf4j:slf4j-simple:${slf4jVersion}"
+}
+
+// Used to run Spec tests: ./gradlew spec
+task spec(dependsOn: ['testClasses'], type: JavaExec) {
+    main = 'org.scalatest.tools.Runner'
+    args = ['-R', 'build/classes/scala/test', '-o']
+    classpath = sourceSets.test.runtimeClasspath
+}
+
+scalafmt {
+    // .scalafmt.conf in the project root is default value, provide only if other location is needed
+    // config file has to be relative path from current project or root project in case of multimodule projects
+    // example usage:
+    // configFilePath = ".scalafmt.conf"
+}
+
+build.dependsOn 'clean', 'checkScalafmt'
