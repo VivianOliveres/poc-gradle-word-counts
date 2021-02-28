@@ -1,5 +1,6 @@
 rootProject.name = 'poc-gradle-word-counts'
 include 'app-scala:2.12'
 include 'app-scala:2.13'
-include 'app-scio'
+include 'app-scio:2.12'
+include 'app-scio:2.13'
 include 'app-spark'

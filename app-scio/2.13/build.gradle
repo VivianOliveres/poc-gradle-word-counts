@@ -1,0 +1,23 @@
+plugins {
+    id 'com.kensai.poc.scala-common_2.12'
+    id 'application'
+}
+
+ext {
+    scioVersion = '0.9.6'
+    beamVersion = '2.24.0'
+}
+
+dependencies {
+    // Scio
+    implementation "com.spotify:scio-core_${scalaMajorVersion}:${scioVersion}"
+    testImplementation "com.spotify:scio-test_${scalaMajorVersion}:${scioVersion}"
+
+    // Beam
+    implementation "org.apache.beam:beam-runners-direct-java:${beamVersion}"
+    implementation "org.apache.beam:beam-runners-google-cloud-dataflow-java:${beamVersion}"
+}
+
+application {
+    mainClass = 'com.kensai.poc.scio.ScioWordCount'
+}

@@ -19,5 +19,5 @@ dependencies {
 }
 
 application {
-    mainClass = 'com.kensai.poc.beam.ScioWordCount'
+    mainClass = 'com.kensai.poc.scio.ScioWordCount'
 }
